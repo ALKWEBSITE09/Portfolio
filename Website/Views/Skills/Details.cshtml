@@ -1,0 +1,25 @@
+﻿@model Website.Models.Skill
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+
+<div>
+    <dl class="row text-black">
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <hr />
+        <dd class = "col-sm-10">
+            <img src="~/Image/Skills/@Html.DisplayFor(model => model.Image)" width="150px" height="150px" />
+        </dd>
+        
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" class="text-info" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index" class="text-info">Back</a>
+</div>

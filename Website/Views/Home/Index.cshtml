@@ -1,0 +1,547 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section id="home-section" class="hero">
+    <div class="home-slider  owl-carousel">
+        <div class="slider-item ">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                    <div class="one-third js-fullheight order-md-last Img-Topedd">
+                        <img class="img Img-Topedd" src="~/image/Profile/@TempData["photo"]" />
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        <div class="text">
+                            <span class="subheading">Hello!</span>
+                            <h1 class="mb-4 mt-3">I'm <span>@TempData["proName"]</span></h1>
+                            <h2 class="mb-4">A Freelance @TempData["service"]</h2>
+                            <p><a href="#cont" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+                            <div class="row justify-content-center">
+                                <a href="#about-section" >
+                                    <img id="onlygifmobile" style="border-radius:50%;" src="~/images/down-arrow.gif" width="30px" height="30px" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                    <div class="one-third js-fullheight order-md-last img" >
+                        <img class="img" src="~/image/Profile/@TempData["photo1"]" />
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        <div class="text">
+                            <span class="subheading">Hello!</span>
+                            <h1 class="mb-4 mt-3">I'm a <span>@TempData["service"]</span> based in @TempData["country"]</h1>
+                            <p><a href="#cont" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+                            <div class="row justify-content-center onlymobile_btn">
+                                <a href="#about-section">
+                                    <img id="onlygifmobile" style="border-radius:50%;" src="~/images/down-arrow.gif" width="30px" height="30px" />
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-md-6 col-lg-5 d-flex">
+                <div class="img-about img d-flex align-items-stretch">
+                    <div class="overlay"></div>
+                    <div class="img d-flex align-self-stretch align-items-center" style="background-image:url(image/Profile/@TempData["photo1"]);">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+                <div class="row justify-content-start pb-3">
+                    <div class="col-md-12 heading-section ftco-animate">
+                        <h1 class="big">About</h1>
+                        <h2 class="mb-4">About Me</h2>
+                        <p>@TempData["desc"]</p>
+                        <ul class="about-info mt-4 px-md-0 px-2">
+                            <li class="d-flex"><span>Name:</span> <span>Alpesh Lakshman Khandekar</span></li>
+                            <li class="d-flex"><span>Date of birth:</span> <span>April 09, 2003</span></li>
+                            <li class="d-flex"><span>Address:</span> <span>@TempData["add"]</span></li>
+                            <li class="d-flex"><span>Zip code:</span> <span>@TempData["zip"]</span></li>
+                            <li class="d-flex"><span>Email:</span> <span>@TempData["email"]</span></li>
+                            <li class="d-flex"><span>Phone: </span> <span>+91 @TempData["phone"]</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="counter-wrap ftco-animate d-flex mt-md-3">
+                    <div class="text">
+                        <p class="mb-4">
+                            <span class="number" data-number="@TempData["about"]">0</span>
+                            <span>Project complete</span>
+                        </p>
+                        <p><a target="_blank" href="@TempData["Resume"]" class="btn btn-primary py-3 px-3">Download CV</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-no-pb" id="resume-section">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-10 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Resume</h1>
+                <h2 class="mb-4">Resume</h2>
+                <p>Resume has two parts: Experience And Education.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-10 heading-section text-center ftco-animate">
+                <h1 class="big big-2" >Education</h1>
+                <h2 class="mb-4">Education</h2>
+                <p>Details of my education are on this page. You can see it by scrolling.</p>
+                <hr style="border-bottom: 2px solid;border-bottom-color: #ffbd39;" />
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="resume-wrap ftco-animate">
+                    <span class="date">JUN 2016-MARCH 2018</span>
+                    <h2>SSC Board</h2>
+                    <span class="position">Suman Highschool no.5</span>
+                    <p class="mt-4">Percentage - 70% & Percentile Rank - 80%</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="resume-wrap ftco-animate">
+                    <span class="date">JUN 2018-MARCH 2020</span>
+                    <h2>HSC Board</h2>
+                    <span class="position">Gyanjyot Vidyalaya Godadara</span>
+                    <p class="mt-4">Percentage - 71% & Percentile Rank - 85%</p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="resume-wrap ftco-animate">
+                    <span class="date">JUN 2020-APRIL 2024</span>
+                    <h2>BE in Computer Science </h2>
+                    <span class="position">Gujarat Technology University</span> <br />
+                    <span class="position">Shree Sitaram Narayanji Patel Institude & Researce Centre (Umrakh Bardoli)</span>
+                    <p class="mt-4">CGPA - 8.05 & CPI 8.05</p>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row justify-content-center pb-4">
+            <div class="col-md-10 heading-section text-center ftco-animate">
+                <h1 class="big big-2" >Experiense</h1>
+                <h2 class="mb-4">Experiense</h2>
+                <p>All the experience I have had so far is on this page. Scroll Now And Show.</p>
+                <hr style="border-bottom: 2px solid;border-bottom-color: #ffbd39;" />
+            </div>
+        </div>
+        <hr />
+        <hr />
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="resume-wrap ftco-animate">
+                    <span class="date">15 March 2024 - 15 April 2024</span>
+                    <h2>Summer Internship</h2>
+                    <span class="position">Comnet Development India</span>
+                    <p class="mt-4"><span>Duration :   </span><a>1 Month</a></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="resume-wrap ftco-animate">
+                    <span class="date">15 FEB 2024 - 15 JUN 2024</span>
+                    <h2>Data Science Cource</h2>
+                    <span class="position">Internshala Training</span>
+                    <p class="mt-4"><span>Duration :   </span><a>4 Month</a></p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <p class="mb-0"><a asp-action="Resume" asp-controller="Index" class="btn btn-primary py-4 px-5">Learn More</a></p>
+        </div>
+        
+    </div>
+</section>
+
+
+
+<section class="ftco-section" id="skills-section">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Skills</h1>
+                <h2 class="mb-4">My Skills</h2>
+                <p>I keep learning something new every day and improve my skills. Till now he has taught me many skills.</p>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="bg-warning services-1">
+                    <span class="icon">
+                        <img src="~/Image/Skills/51844a68-314e-4d3e-9d8e-29910e19146f_html.png" width="80px" height="80px" />
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">HTML</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="bg-warning services-1">
+                    <span class="icon">
+                        <img src="~/Image/Skills/4ff628d9-4f48-42c8-a2b7-99af5316fe9d_css-3.png" width="80px" height="80px" />
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">CSS</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="bg-warning services-1">
+                    <span class="icon">
+                        <img src="~/Image/Skills/ccd3bbff-3cfa-4153-8ded-6b2e365e0ccd_java-script.png" width="80px" height="80px" />
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">JAVASCRIPT</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="bg-warning services-1">
+                    <span class="icon">
+                        <img src="~/Image/Skills/3968eacf-d7e2-406d-8df4-41f88169f52b_python.png" width="80px" height="80px" />
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">PYTHON</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="bg-warning services-1">
+                    <span class="icon">
+                        <img src="~/Image/Skills/4e491c53-967a-4711-91ba-f1b023ed566d_program.png" width="80px" height="80px" />
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">JAVA</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="bg-warning services-1">
+                    <span class="icon">
+                        <img src="~/Image/Skills/8918002c-7036-411a-91ad-757a102f6e0d_hashtag.png" width="80px" height="80px" />
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">C#</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <p class="mb-0"><a asp-action="Skill" asp-controller="Index" class="btn btn-primary py-3 px-5">Learn More</a></p>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section" id="services-section">
+    <div class="container">
+        <div class="row justify-content-center py-5 mt-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Services</h1>
+                <h2 class="mb-4">Services</h2>
+                <p>I am freelancing in these services. I have opened many projects in all these services.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="services-1">
+                    <span class="icon">
+                        <img src="~/Image/Technologys/b5adaaa3-4306-43bb-99d5-af8e9cf27385_ux.png" width="80px" height="80px" />
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Web Design</h3>
+                    </div>
+                    <div class="desc">
+                        <h3 class="mb-5">Html, CSS, Javascript</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="services-1">
+                    <span class="icon">
+                        <img src="~/Image/Technologys/e976713b-61c9-4ec1-952e-382ba7d910b2_coding.png" width="80px" height="80px" />
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Web Development</h3>
+                    </div>
+                    <div class="desc">
+                        <h3 class="mb-5">Python Django</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="services-1">
+                    <span class="icon">
+                        <img src="~/Image/Technologys/707e5408-4a86-4d36-945b-54ae5f734aa6_web.png" width="80px" height="80px" />
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Asp.Net Development</h3>
+                    </div>
+                    <div class="desc">
+                        <h3 class="mb-5">C#, Asp.Net MVC, Html, Css, js, Bootstrap</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="services-1">
+                    <span class="icon">
+                        <img src="~/Image/Technologys/015dd2d9-ea57-4d87-a16e-d2a4117a1a0a_animate(1).png" width="80px" height="80px" />
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Animation</h3>
+                    </div>
+                    <div class="desc">
+                        <h3 class="mb-5">Adobe After Effect, Adobe Animate, Adobe Photoshop, Blender</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="services-1">
+                    <span class="icon">
+                        <img src="~/Image/Technologys/38252ccd-68d4-40db-a930-8de9c46b4bd5_photographer.png" width="80px" height="80px" />
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Photography</h3>
+                    </div>
+                    <div class="desc">
+                        <h3 class="mb-5">Canon Camera, Video Editing</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a href="#" class="services-1">
+                    <span class="icon">
+                        <img src="~/Image/Technologys/f09763e1-5d92-49a9-91f5-220a0a1e6254_desginer.png" width="80px" height="80px" />
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Graphic Design</h3>
+                    </div>
+                    <div class="desc">
+                        <h3 class="mb-5">Video Editing, Photoshop, Canva</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <p class="mb-0"><a asp-action="Service" asp-controller="Index" class="btn btn-primary py-3 px-5">Learn More</a></p>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section ftco-project" id="projects-section">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Projects</h1>
+                <h2 class="mb-4">My Projects</h2>
+                <p>I have completed all these projects. I have uploaded them here along with the complete source code.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 " style="margin-bottom:2.5em;">
+                <div class="card mb-4 bg-warning" style="max-width: 1080px;">
+                    <div class="row g-0">
+                        <div class="col-12">
+                            <img src="~/Image/Projects/img/@TempData["pro1"]" class="col-12" style="padding:1px 1px;" height="200px" alt="...">
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card-body text-black">
+                                <h5 class="card-title fw-bold">Online Cake Shop</h5>
+                                
+                                <h5 class="card-text text-black" style="color:black;">Asp.Net development</h5>
+                                <a class="card-text" asp-action="ProjectVideo" asp-controller="Index" asp-route-id="1" style="color:#1790ec;"><img src="~/images/Details.png" width="20px" height="20px" style="margin:5px;" /><span style="text-decoration:underline;">Click Here</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 " style="margin-bottom:2.5em;">
+                <div class="card mb-4 bg-warning" style="max-width: 1080px;">
+                    <div class="row g-0">
+                        <div class="col-12">
+                            <img src="~/Image//Projects/img/@TempData["pro2"]" class="col-12" style="padding:1px 1px;" height="200px" alt="...">
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card-body text-black">
+                                <h5 class="card-title fw-bold">IPL Auction</h5>
+                                <h5 class="card-text text-black" style="color:black;">Data Science</h5>
+                                <a class="card-text" asp-action="ProjectVideo" asp-controller="Index" asp-route-id="2" style="color:#1790ec;"><img src="~/images/Details.png" width="20px" height="20px" style="margin:5px;" /><span style="text-decoration:underline;">Click Here</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 " style="margin-bottom:2.5em;">
+                <div class="card mb-4 bg-warning" style="max-width: 1080px;">
+                    <div class="row g-0">
+                        <div class="col-12">
+                            <img src="~/image/Projects/img/@TempData["pro3"]" style="padding:1px 1px;" class="col-12" height="200px" alt="...">
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card-body text-black">
+                                <h5 class="card-title fw-bold">Employee Salary Pridiction</h5>
+                                <h5 class="card-text text-black" style="color:black;">Data Science</h5>
+                                <a class="card-text" asp-action="ProjectVideo" asp-controller="Index" asp-route-id="3" style="color:#1790ec;"><img src="~/images/Details.png" width="20px" height="20px" style="margin:5px;" /><span style="text-decoration:underline;">Click Here</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <p class="mb-0"><a asp-action="Project" asp-controller="Index" class="btn btn-primary py-3 px-5">Learn More</a></p>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section" id="blog-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Cources</h1>
+                <h2 class="mb-4">Our Cources</h2>
+                <p>Contact to get access to the course. I have completed all the courses given in this.</p>
+            </div>
+        </div>
+        <div class="row d-flex">
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <a asp-action="CourseDetail" asp-controller="Index" asp-route-id="1" class="block-20">
+                        <img src="~/Image/Courses/@TempData["cimage1"]"  class="col-12" />
+                    </a>
+                    <div class="text float-right d-block" style="padding-left:1em;padding-right:1em;">
+                        <div class="d-flex align-items-center mb-3 meta">
+                            <p class="mb-0">
+                                <span class="mr-2">6/15/2024</span>
+                                <a asp-action="CourseDetail" asp-controller="Index" asp-route-id="1" class="mr-2">Data Sciece</a>
+                            </p>
+                        </div>
+                        <h3 class="heading"><a asp-action="CourseDetail" asp-controller="Index" asp-route-id="1">Placement Gurantee Course Internshala</a></h3>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <a asp-action="CourseDetail" asp-controller="Index" asp-route-id="2" class="block-20">
+                        <img src="~/Image/Courses/@TempData["cimage2"]" class="col-12" />
+                    </a>
+                    <div class="text float-right d-block" style="padding-left:1em;padding-right:1em;">
+                        <div class="d-flex align-items-center mb-3 meta">
+                            <p class="mb-0">
+                                <span class="mr-2">3/15/2024</span>
+                                <a asp-action="CourseDetail" asp-controller="Index" asp-route-id="2" class="mr-2">Python Django</a>
+                            </p>
+                        </div>
+                        <h3 class="heading"><a asp-action="CourseDetail" asp-controller="Index" asp-route-id="2">Comnet Development India</a></h3>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry">
+                    <a asp-action="CourseDetail" asp-controller="Index" asp-route-id="3" class="block-20">
+                        <img src="~/Image/Courses/@TempData["cimage3"]" class="col-12" />
+                    </a>
+                    <div class="text float-right d-block" style="padding-left:1em;padding-right:1em;">
+                        <div class="d-flex align-items-center mb-3 meta">
+                            <p class="mb-0">
+                                <span class="mr-2">3/15/2024</span>
+                                <a asp-action="CourseDetail" asp-controller="Index" asp-route-id="3" class="mr-2">Animation</a>
+                            </p>
+                        </div>
+                        <h3 class="heading"><a asp-action="CourseDetail" asp-controller="Index" asp-route-id="3">Internshala Training Course</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <p class="mb-0"><a asp-action="Course" asp-controller="Index" class="btn btn-primary py-3 px-5">Learn More</a></p>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+    <div class="container">
+        <div class="row d-md-flex align-items-center">
+            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                    <div class="text">
+                        <strong class="number" data-number="@TempData["skill"]">0</strong>
+                        <span>Skills</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                    <div class="text">
+                        <strong class="number" data-number="@TempData["project"]">0</strong>
+                        <span>Projects</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                    <div class="text">
+                        <strong class="number" data-number="@TempData["course"]">0</strong>
+                        <span>Courses</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                    <div class="text">
+                        <strong class="number" data-number="@TempData["services"]">0</strong>
+                        <span>Services</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-7 ftco-animate text-center">
+                <h2>I'm <span>Available</span> for freelancing</h2>
+                <p class="mb-0"><a href="#cont" class="btn btn-primary py-3 px-5">Hire me</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div id="cont">
+    <partial name="../Contacts/Creates.cshtml"/>
+</div>

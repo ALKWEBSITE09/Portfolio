@@ -1,0 +1,68 @@
+﻿@model Website.Models.Course
+
+@{
+    ViewData["Title"] = "CourseDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="ftco-section" id="blog-section">
+    <div class="container">
+        
+        <div class="row justify-content-center mb-5 pb-5">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Cources</h1>
+                <h2 class="mb-4">Our Cources</h2>
+                <p>Contact to get access to the course. I have completed all the courses given in this.</p>
+            </div>
+        </div>
+        <div>
+            <a asp-action="Course">Back</a>
+        </div>
+        <div >
+            <dl class="row ">
+                <dt class="col-sm-2">
+                    Course Name : 
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+                <dt class="col-sm-2">
+                    Institude Name :
+                </dt>
+
+                <dd class="col-sm-10">
+                    <h3 class="heading">@Html.DisplayFor(model => model.Title)</h3>
+                </dd>
+                <dt class="col-sm-2">
+                    Certificate :
+                </dt>
+
+                <dd class="col-sm-10">
+                    <p class="mb-0"><a href="@Html.DisplayFor(model => model.Certificate)" class="btn btn-primary">Click Here</a></p>
+                </dd>
+                <dt class="col-sm-2">
+                    Date :
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Date)
+                </dd>
+                <dt class="col-sm-2">
+                    Description :
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+                <dt class="col-sm-2">
+                    Price :
+                </dt>
+                
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Price) INR
+                </dd>
+            </dl>
+        </div>
+    </div>
+</section>
+            
+
+

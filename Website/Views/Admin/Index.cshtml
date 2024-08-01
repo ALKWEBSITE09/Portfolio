@@ -1,0 +1,37 @@
+﻿@model Website.Models.Admin
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Login.cshtml";
+}
+<div style="background-color: slategray;border:solid 2px black;margin-top:2.5em;padding-bottom:5em;padding-top:2.5em;border-radius:1em;">
+    <header style="background-color: slategray;">
+        <nav style="background-color: slategray;" class="text-white navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+            <div class="container-fluid row justify-content-center">
+                <a class="row justify-content-center fw-bold text-white text-decoration-none"> Alpesh Khandekar</a>
+            </div>
+        </nav>
+    </header>
+    <div class="row justify-content-center">
+        <div class="col-md-5" >
+            <form asp-action="Index" style="margin-left:10px;margin-right:10px;">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Username" class="text-white control-label"></label>
+                    <input asp-for="Username" class="form-control" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <label asp-for="Password" class="text-white control-label"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="col-12 form-group mt-4">
+                    <input type="submit" value="Login" class="btn col-12 btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>

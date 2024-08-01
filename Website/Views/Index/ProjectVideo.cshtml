@@ -1,0 +1,38 @@
+﻿@model Website.Models.Project
+
+@{
+    ViewData["Title"] = "ProjectVideo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="ftco-section ftco-project" id="projects-section">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Projects</h1>
+                <h2 class="mb-4">My Projects</h2>
+                <p>I have completed all these projects. I have uploaded them here along with the complete source code.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 " style="margin-bottom:2.5em;">
+                <div>
+                    <a asp-action="Project">Back to List</a>
+                </div>
+                <div class="mt-4">
+                    <h4 class="fw-bold">@Html.DisplayFor(model => model.ProjectTitle) | @Html.DisplayFor(model => model.Techno.Name)</h4>
+                    <hr />
+                    <div class="justify-content-center">
+                        <p class="mb-0"><a target="_blank" href="@Html.DisplayFor(model => model.videourl)"  class="btn btn-primary py-3 px-5">Watch Video</a></p>
+                    </div>
+                    <h5 class="fw-bold" style="margin-top:2em;">Description :</h5><br />
+                    <p>@Html.DisplayFor(model => model.ProjectDescription)</p>
+
+                    <div>
+                        <p><a href="@Html.DisplayFor(model => model.Code)" target="_blank">Click here</a> for access.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

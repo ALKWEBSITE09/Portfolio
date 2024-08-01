@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Website.Models.Course>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h1>Courses</h1>
+<hr />
+<p>
+    <a asp-action="Create" style="background-color:#FF6F61;" class="btn">Add Course</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Course Image
+            </th>
+            <th>
+                Course Name
+            </th>
+            <th>
+                Institude Name
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    <img src="~/Image/Courses/@Html.DisplayFor(modelItem => item.Image)" width="100px" height="100px"/>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

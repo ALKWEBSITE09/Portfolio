@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Website.Models.Project>
+
+@{
+    ViewData["Title"] = "Project";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .Butt{
+        border-radius: 5px;
+        box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+        background-color:black;
+    }
+
+    .btn-outline-secondaryr{
+        color: white;
+        border-color: dfa531;
+    }
+</style>
+
+
+<section class="ftco-section ftco-project" id="projects-section">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Projects</h1>
+                <h2 class="mb-4">My Projects</h2>
+                <p>I have completed all these projects. I have uploaded them here along with the complete source code.</p>
+            </div>
+        </div>
+
+        <div style="margin-bottom:2em;">
+            <form class="row justify-content-end" asp-action="Project" enctype="multipart/form-data">
+                <input class="col-3" style="border-radius:5px; margin-right:2px;" type="search" value="@TempData["value"]" name="projectsearch" class="form-control" placeholder="Search">
+                <button style="margin-right:1em;" class="Butt btn-outline-secondaryr" type="submit" id="button-addon2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+@{
+
+            if (Model.Count() == 0)
+            {
+            <h1 class="row justify-content-center text-danger">Project Not Found</h1>
+            }
+            else
+            {
+
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-4 " style="margin-bottom:2.5em;">
+                        <div class="card mb-6 bg-warning" style="max-width: 1080px;">
+                            <div class="row g-0">
+                                    <div class="col-12">
+                                    <img src="~/Image/Projects/img/@Html.DisplayFor(modelItem => item.Image)" style="padding:1px 1px;" class="col-12" height="200px" alt="...">
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="card-body text-black">
+                                        <h5 class="card-title fw-bold">@Html.DisplayFor(modelItem => item.ProjectTitle)</h5>
+                                        <h5 class="card-text text-black" style="color:black;">@Html.DisplayFor(modelItem => item.Techno.Name)</h5>
+                                        <a class="card-text" asp-action="ProjectVideo" asp-controller="Index" asp-route-id="@item.Id" style="color:#1790ec;"><img src="~/images/Details.png" width="20px" height="20px" style="margin:5px;" /><span style="text-decoration:underline;">Click Here</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+            }
+}
+    </div>
+</section>

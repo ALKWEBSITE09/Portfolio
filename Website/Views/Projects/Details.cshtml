@@ -1,0 +1,32 @@
+﻿@model Website.Models.Project
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+
+<div>
+   
+    <dl class="row">
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectTitle)
+        </dd>
+        
+        <dd class="col-sm-10">
+            <img src="~/Image/Projects/img/@Html.DisplayFor(model => model.Image)" width="300px" height="150px" />
+        </dd>
+    
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProjectDescription)
+        </dd>
+        
+        <dd class = "col-sm-10">
+            Service : @Html.DisplayFor(model => model.Techno.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" class="text-info" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index" class="text-info">Back</a>
+</div>

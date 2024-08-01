@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Website.Models.Experience>
+
+<section class="ftco-section ftco-no-pb" id="resume-section">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-10 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Resume</h1>
+                <h2 class="mb-4">Resume</h2>
+                <p>Resume has two parts: Experience And Education.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-10 heading-section text-center ftco-animate">
+                <h1 class="big big-2" >Education</h1>
+                <h2 class="mb-4">Education</h2>
+                <p>Details of my education are on this page. You can see it by scrolling.</p>
+                <hr style="border-bottom: 2px solid;border-bottom-color: #ffbd39;" />
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="resume-wrap ftco-animate">
+                    <span class="date">JUN 2016-MARCH 2018</span>
+                    <h2>SSC Board</h2>
+                    <span class="position">Suman Highschool no.5</span>
+                    <p class="mt-4">Percentage - 70% & Percentile Rank - 80%</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="resume-wrap ftco-animate">
+                    <span class="date">JUN 2018-MARCH 2020</span>
+                    <h2>HSC Board</h2>
+                    <span class="position">Gyanjyot Vidyalaya Godadara</span>
+                    <p class="mt-4">Percentage - 71% & Percentile Rank - 85%</p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="resume-wrap ftco-animate">
+                    <span class="date">JUN 2020-APRIL 2024</span>
+                    <h2>BE in Computer Science </h2>
+                    <span class="position">Gujarat Technology University</span> <br />
+                    <span class="position">Shree Sitaram Narayanji Patel Institude & Researce Centre (Umrakh Bardoli)</span>
+                    <p class="mt-4">CGPA - 8.05 & CPI 8.05</p>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row justify-content-center pb-4">
+            <div class="col-md-10 heading-section text-center ftco-animate">
+                <h1 class="big big-2" >Experiense</h1>
+                <h2 class="mb-4">Experiense</h2>
+                <p>All the experience I have had so far is on this page. Scroll Now And Show.</p>
+                <hr style="border-bottom: 2px solid;border-bottom-color: #ffbd39;" />
+            </div>
+        </div>
+        <hr />
+        <hr />
+
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">@Html.DisplayFor(modelItem => item.Duration)</span>
+                        <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+                        <span class="position">@Html.DisplayFor(modelItem => item.Company)</span>
+                        <p class="mt-4"><span>Duration :   </span><a>@Html.DisplayFor(modelItem => item.desc)</a></p>
+                    </div>
+                </div>
+            }
+        </div>
+        
+    </div>
+</section>

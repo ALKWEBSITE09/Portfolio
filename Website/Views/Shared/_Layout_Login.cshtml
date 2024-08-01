@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="background-color:beige;">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALKWEBSITELOGIN</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Login/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Login/sam.styles.css" asp-append-version="true" />
+</head>
+<body style="background-color:beige;">
+    
+    <div class="container" style="background-color:beige;">
+        <main role="main" style="background-color:beige;" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Login/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

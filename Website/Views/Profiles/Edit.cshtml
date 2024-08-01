@@ -1,0 +1,87 @@
+﻿@model Website.Models.ModelVM.ProfileVM
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h1>Your Profile</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Photo" class="control-label">Home Image</label>
+                <input asp-for="Photo" value="@Html.DisplayFor(model => model.Photo.FileName)" class="form-control" />
+                <span asp-validation-for="Photo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="aboutphoto" class="control-label">About Image</label>
+                <input asp-for="aboutphoto" value="@Html.DisplayFor(model => model.aboutphoto.FileName)" class="form-control" />
+                <span asp-validation-for="aboutphoto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Name</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dob" class="control-label">Date Of Birth</label>
+                <input asp-for="Dob" class="form-control" />
+                <span asp-validation-for="Dob" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ProfileDesc" class="control-label">Profile description</label>
+                <input asp-for="ProfileDesc" class="form-control" />
+                <span asp-validation-for="ProfileDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MainDomain" class="control-label">main Technology</label>
+                <input asp-for="MainDomain" class="form-control" />
+                <span asp-validation-for="MainDomain" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="district" class="control-label">District</label>
+                <input asp-for="district" class="form-control" />
+                <span asp-validation-for="district" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Country" class="control-label">Country</label>
+                <input asp-for="Country" class="form-control" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="state" class="control-label">State</label>
+                <input asp-for="state" class="form-control" />
+                <span asp-validation-for="state" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label">Address</label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">Email</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label">Mobile No.</label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

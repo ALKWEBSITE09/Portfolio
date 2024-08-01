@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Website.Models.Skill>
+
+@{
+    ViewData["Title"] = "Skill";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="ftco-section" id="skills-section">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Skills</h1>
+                <h2 class="mb-4">My Skills</h2>
+                <p>I keep learning something new every day and improve my skills. Till now he has taught me many skills.</p>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 text-center d-flex ftco-animate">
+                    <a href="#" class="bg-warning services-1">
+                        <span class="icon">
+                            <img src="~/Image/Skills/@Html.DisplayFor(modelItem => item.Image)" width="80px" height="80px" />
+                        </span>
+                        <div class="desc">
+                            <h3 class="mb-5">@Html.DisplayFor(modelItem => item.Name)</h3>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>

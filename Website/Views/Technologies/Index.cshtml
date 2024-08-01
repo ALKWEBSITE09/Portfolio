@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Website.Models.Technology>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h1>Services</h1>
+<hr />
+<p>
+    <a asp-action="Create" style="background-color:#FF6F61;" class="btn">Add Service</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Icon
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    <img src="~/Image/Technologys/@Html.DisplayFor(modelItem => item.image)" width="80px" height="80px" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

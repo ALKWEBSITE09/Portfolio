@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Website.Models.Project>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h1>Projects</h1>
+<hr />
+<p>
+    <a asp-action="Create" class="btn" style="background-color:#FF6F61;">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Project Image
+            </th>
+            
+            <th>
+                Project Name
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    <img src="~/Image/Projects/img/@Html.DisplayFor(modelItem => item.Image)" width="200px" height="100px" />
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectTitle)
+            </td>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

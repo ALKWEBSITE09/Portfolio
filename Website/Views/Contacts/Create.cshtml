@@ -1,0 +1,147 @@
+﻿@model Website.Models.Contact
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (TempData["cont"] != null)
+{
+    <div style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        z-index:9999;
+        justify-content: center;
+        align-items: center;" id="overlay">
+        <div style="
+        z-index:9999;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;">
+            <img src="~/images/checked.png" width="100px" height="100px"/>
+            <h2 class="text-success">Success!</h2>
+            <p>your message sent.</p>
+            <button style="
+        padding: 10px 20px;
+        z-index:9999;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;" onclick="closePopup()">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function closePopup() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+}
+
+<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Contact</h1>
+                <h2 class="mb-4">Contact Me</h2>
+                <p>If you have any work related to project, course and freelancing, you can contact me.</p>
+            </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-map-signs"></span>
+                    </div>
+                    <h3 class="mb-4">Address</h3>
+                    <p>@ViewBag.add</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-phone2"></span>
+                    </div>
+                    <h3 class="mb-4">Contact Number</h3>
+                    <p><a href="tel://@ViewBag.phone">+91 @ViewBag.phone</a></p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-paper-plane"></span>
+                    </div>
+                    <h3 class="mb-4">Email Address</h3>
+                    <p><a href="mailto:@ViewBag.email">@ViewBag.email</a></p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-globe"></span>
+                    </div>
+                    <h3 class="mb-4">Website</h3>
+                    <p><a href="#">Alk.com</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gutters block-9">
+            
+            <div class="col-md-6 order-md-last d-flex" style="margin-top:3em;">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group">
+                        <input asp-for="Name" type="text" class="form-control" placeholder="Your Name">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="Email" type="text" class="form-control" placeholder="Your Email">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+
+                    </div>
+                    <div class="form-group">
+                        <select asp-for="Subject" type="text" class="form-control" placeholder="Subject">
+                            <option>Select Subject</option>
+                            <option>Course Related</option>
+                            <option>Project Related</option>
+                            <option>Freelancing Or Job Related</option>
+                        </select>
+                        <span asp-validation-for="Subject" class="text-danger"></span>
+
+                    </div>
+                    <div class="form-group">
+                        <textarea asp-for="Description" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="col-md-6 d-flex">
+                
+                <div class="img-about img d-flex align-items-stretch" style="width:85%">
+                    <div class="overlay"></div>
+                    <img class="img d-flex align-self-stretch align-items-center" src="~/Image/Profile/@ViewBag.photo" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,10 @@
+﻿
+#onlygifmobile{
+    display:block;
+}
+
+@media(min-width:400px) {
+    #onlygifmobile{
+        display:none;
+    }
+}

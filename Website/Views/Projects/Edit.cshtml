@@ -1,0 +1,57 @@
+﻿@model Website.Models.ModelVM.ProjectVM
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Project</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Image" class="control-label">Project Image</label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="videourl" class="control-label">Project Url</label>
+                <input asp-for="videourl" class="form-control" />
+                <span asp-validation-for="videourl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjectTitle" class="control-label">Project Name</label>
+                <input asp-for="ProjectTitle" class="form-control" />
+                <span asp-validation-for="ProjectTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjectDescription" class="control-label">Project Description</label>
+                <textarea asp-for="ProjectDescription" class="form-control"></textarea>
+                <span asp-validation-for="ProjectDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Code" class="control-label">Source Code</label>
+                <input asp-for="Code" class="form-control" />
+                <span asp-validation-for="Code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TechnoId" class="control-label">Service</label>
+                <select asp-for="TechnoId" class="form-control" asp-items="ViewBag.TechnoId"></select>
+                <span asp-validation-for="TechnoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update Project" class="btn" style="background-color:#FF6F61;" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="text-info">Back</a>
+</div>
+
